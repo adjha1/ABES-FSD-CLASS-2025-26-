@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <script>
+
+//for promise............................
+
+        const myPromise=new Promise((resolve,reject)=>{
+const password="adiyya@123";
+if(password.length>8){
+    resolve("Password length is ok");
+}else{
+    reject("password is shorter in length");
+}
+});
+console.log(myPromise);
+ 
+myPromise.then((msg)=>{
+    console.log(msg);
+}).catch((err)=>{
+    console.log(err);
+}).finally(()=>{
+    console.log("Hii....I m closing the resource")
+})
+   
+
+   //handlePromise();
+     
+//for fetch data..........................
+
+   async function fetchData(){
+       const data=await fetch("https://fakestoreapi.com/products");
+       console.log(data);
+     }
+     fetchData();
+    </script>
+</body>
+</html>
