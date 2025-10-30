@@ -1,15 +1,17 @@
 import './App.css'
-import 'bootstrap/dist/css/bootstrap.css';
-import img from './assets/logo.jpg';
+import Card from './Component/Card';
 import Nabvar from './Component/Nabvar';
+import 'bootstrap/dist/css/bootstrap.css';
 function App() {
   return (
     <div>
-      <h1>hi student</h1>
       <Nabvar />
-      <Nabvar />
-      <Nabvar />
-
+      <br />
+      <Card name="Aditya" edu="Ph.D." />
+      <br />
+      <Card name="Deepak" edu="M.Tech" />
+      <br />
+      <Card name="Rupak" edu="B.Tech"/>
     </div>
   )
 }

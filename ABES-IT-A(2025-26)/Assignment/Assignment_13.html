@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: grey;
+    }
+
+    .container {
+        width: 1131px;
+        height: 1600px;
+        margin: 20px;
+        display: flex;
+
+
+    }
+
+    .box1 {
+        background-color: #1F3B53;
+        width: 30%;
+        height: 1600px;
+
+
+    }
+
+    .box2 {
+        background-color: #FFFFFF;
+        width: 70%;
+        height: 1600px;
+        padding-right: 40px;
+        padding-left: 40px;
+
+
+    }
+
+    .box1 img {
+        border-radius: 50%;
+        margin-top: 30px;
+        border: 6px solid white;
+
+    }
+
+    .box1 img:hover {
+        transform: scale(1.05);
+
+    }
+
+    .box1-info {
+        font-size: 1rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        margin: 40px;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .contact-item i {
+        font-size: 1.3rem;
+        margin-right: 15px;
+    }
+
+    .contact-item span {
+        font-size: 0.8rem;
+    }
+
+    .education-item {
+        text-align: left;
+        font-size: 0.8rem;
+
+
+    }
+
+    .skill-category h3 {
+        font-size: 0.8rem;
+
+    }
+
+    .box2name {
+        text-align: center;
+
+        margin-top: 1px;
+        font-size: 3rem;
+        font-family: 'Times New Roman', Times, serif;
+
+    }
+
+    .box2name p {
+        margin: 0.1px;
+        padding: 0.1px;
+        font-size: 3.9rem;
+
+    }
+
+    .box2sec p {
+        font-size: 2.3rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #1F3B53;
+        font-weight: 700;
+        text-align: left;
+        margin-left: 25px;
+        margin-top: 50px;
+
+    }
+
+    .box2sec span {
+        font-size: 1rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: black;
+        font-weight: 700;
+        text-align: left;
+        margin-left: 25px;
+        margin-top: 50px;
+
+    }
+
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 0;
+    }
+
+    /* Updated styles for the project cards */
+    .project-card {
+        border: 5px solid #1F3B53;
+        padding: 20px;
+        border-radius: 15px;
+        background-color: white;
+        color: black;
+    }
+
+    .project-card h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #1F3B53;
+        font-size: 2rem;
+    }
+
+    .project-links a {
+        color: #1F3B53;
+        text-decoration: none;
+        border-bottom: 1px solid #1F3B53;
+        margin-right: 15px;
+        font-size: 1.2rem;
+    }
+
+    .project-links a:hover {
+        color: #1F3B53;
+    }
+
+    .project-card img {
+        height: 150px;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+        margin-bottom: 15px;
+        border: 3px solid #1F3B53;
+        border-radius: 8px;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .project-card img:hover {
+        transform: scale(1.05);
+        /* Scales the image up by 5% on hover */
+    }
+
+    .input-data {}
+
+    table {
+        margin: 50px auto;
+        border-collapse: collapse;
+        width: 40%;
+        font-size: 1rem;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+        background-color: #1F3B53;
+        border: 2px solid white;
+    }
+
+    td,
+    th {
+        border: 1px solid white;
+        padding: 10px;
+    }
+
+    table button {
+        font-size: 2rem;
+        border-radius: 12px;
+        color: #1F3B53;
+        border: 5px solid black;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+
+    }
+</style>
+
+<body>
+    <div class="input-data">
+        <table>
+            <tr>
+                <th colspan="5">
+                    <b>Registation Page</b>
+                </th>
+            </tr>
+
+            <tr>
+                <th colspan="5">Fill the details below</th>
+
+            </tr>
+
+            <tr>
+                <td>Name : </td>
+                <td colspan="4"><input type="text" placeholder="Enter your name" id="ary"></td>
+            </tr>
+
+            <tr>
+                <td>Gmail : </td>
+                <td colspan="4"><input type="text" placeholder="Enter your gmail" id="cry"></td>
+            </tr>
+            <tr>
+                <td>Phone Number : </td>
+                <td colspan="4"><input type="text" placeholder="Enter your phone number" id="bry"></td>
+            </tr>
+            <tr>
+                <td>Address : </td>
+                <td>
+                    <input type="text" placeholder="Enter your address" id="dry">
+                </td>
+            </tr>
+            <tr>
+                <td>Website Link : </td>
+                <td>
+                    <input type="text" placeholder="Enter your website link" id="wl">
+                </td>
+            </tr>
+            <tr>
+                <td>Programming Languages : </td>
+                <td>
+                    <input type="text" name="" id="pl1" placeholder="Programming Language 1">
+                    <input type="text" name="" id="pl2" placeholder="Programming Language 2">
+                    <input type="text" name="" id="pl3" placeholder="Programming Language 3">
+                    <input type="text" name="" id="pl4" placeholder="Programming Language 4">
+                    <input type="text" name="" id="pl5" placeholder="Programming Language 5">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Web Technologies : </td>
+                <td>
+                    <input type="text" name="" id="w1" placeholder="WEBD">
+                    <input type="text" name="" id="w2" placeholder="WEBD">
+                    <input type="text" name="" id="w3" placeholder="WEBD">
+                    <input type="text" name="" id="w4" placeholder="WEBD">
+                    <input type="text" name="" id="w5" placeholder="WEBD">
+                </td>
+            </tr>
+            <tr>
+                <td>Profile :</td>
+                <td>
+                    <input type="text" id="prof" placeholder="Enter your profile summary">
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><button onclick="abes()">SUBMIT</button></td>
+            </tr>
+
+
+
+        </table>
+
+    </div>
+    <script>
+        function abes() {
+            let x = inputvalu = document.getElementById("ary");
+            let y = x.value;
+            document.getElementById("aaa").innerHTML = y;
+
+            let pnum = inputvalu = document.getElementById("bry");
+            let ynum = pnum.value;
+            document.getElementById("bbb").innerHTML = ynum;
+
+            let xmail = inputvalu = document.getElementById("cry");
+            let ymail = xmail.value;
+            document.getElementById("ccc").innerHTML = ymail;
+
+            let xadd = inputvalu = document.getElementById("dry");
+            let yadd = xadd.value;
+            document.getElementById("ddd").innerHTML = yadd;
+
+            let xpl1 = inputvalu = document.getElementById("pl1");
+            let ypl1 = xpl1.value;
+            document.getElementById("ddd1").innerHTML = ypl1;
+
+            let xpl2 = inputvalu = document.getElementById("pl2");
+            let ypl2 = xpl2.value;
+            document.getElementById("ddd2").innerHTML = ypl2;
+
+            let xpl3 = inputvalu = document.getElementById("pl3");
+            let ypl3 = xpl3.value;
+            document.getElementById("ddd3").innerHTML = ypl3;
+
+            let xpl4 = inputvalu = document.getElementById("pl4");
+            let ypl4 = xpl4.value;
+            document.getElementById("ddd4").innerHTML = ypl4;
+
+            let xpl5 = inputvalu = document.getElementById("pl5");
+            let ypl5 = xpl5.value;
+            document.getElementById("ddd5").innerHTML = ypl5;
+
+
+            let xw1 = inputvalu = document.getElementById("w1");
+            let yw1 = xw1.value;
+            document.getElementById("www1").innerHTML = yw1;
+
+            let xw2 = inputvalu = document.getElementById("w2");
+            let yw2 = xw2.value;
+            document.getElementById("www2").innerHTML = yw2;
+
+            let xw3 = inputvalu = document.getElementById("w3");
+            let yw3 = xw3.value;
+            document.getElementById("www3").innerHTML = yw3;
+
+            let xw4 = inputvalu = document.getElementById("w4");
+            let yw4 = xw4.value;
+            document.getElementById("www4").innerHTML = yw4;
+
+            let xw5 = inputvalu = document.getElementById("w5");
+            let yw5 = xw5.value;
+            document.getElementById("www5").innerHTML = yw5;
+
+            let xprof = inputvalu = document.getElementById("prof");
+            let yprof = xprof.value;
+            document.getElementById("ppp1").innerHTML = yprof;
+
+            let xwl = inputvalu = document.getElementById("wl");
+            let ywl = xwl.value;
+            document.getElementById("wl1").innerHTML = ywl;
+
+
+
+
+
+
+        }
+    </script>
+    <center>
+        <div class="container">
+            <div class="box1">
+
+                <img src="/FSD_5th_SEM_Hammad/Assignments/cropped_circle_image (2).png" alt="" height="200">
+
+                <div class="box1-info">
+                    <h1>CONTACT</h1>
+                    <hr>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span id="bbb"></span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span id="ccc"></span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span id="ddd"></span>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fa-solid fa-globe"></i>
+                        <a href="https://ahmad-hammad-khan-portfolio.netlify.app/" id="wl1"
+                            style="text-decoration: none; color: white;"></a>
+                    </div>
+
+                    <h1>EDUCATION</h1>
+                    <hr>
+                    <div class="education-item">
+                        <h2 style="font-size: 1.2rem;">2023 - 2027</h2>
+                        <h2 style="font-size: 1.2rem;">ABES Engineering College , Ghaziabaz</h2>
+                        <input type="radio" name="" id=""> Bachelors in Technology ( Information Technology )
+                        <br>
+                        <h2 style="font-size: 1.2rem;">2021 - 2023</h2>
+                        <h2 style="font-size: 1.2rem;">Children's Academy , Lakhimpur-Kheri</h2>
+                        <input type="radio" name="" id=""> Higher Secondary education <br> <br>
+
+                        <center>
+                            <h1 style="font-size: 1.9rem;">SKILLS</h1>
+                        </center>
+                        <hr>
+                        <div class="skill-category">
+                            <h3>Programming Languages</h3>
+                            <ul>
+                                <li id="ddd1"></li>
+                                <li id="ddd2"></li>
+                                <li id="ddd3"></li>
+                                <li id="ddd4"></li>
+                                <li id="ddd5"></li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Web Technologies</h3>
+                            <ul>
+                                <li id="www1"></li>
+                                <li id="www2"></li>
+                                <li id="www3"></li>
+                                <li id="www4"></li>
+                                <li id="www5"></li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Databases & Tools</h3>
+                            <ul>
+                                <li>MySQL</li>
+                                <li>DBMS</li>
+                                <li>Git & GitHub</li>
+                                <li>VS Code</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Concepts & Practices</h3>
+                            <ul>
+                                <li>Data Structures & Algorithms</li>
+                                <li>Object-Oriented Programming with JAVA</li>
+                                <li>Object-Oriented System Design using C++</li>
+                                <li>Operating System</li>
+                                <li>Theory of Automata and Formal Languages</li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="box2">
+                <div class="box2name">
+
+
+                    <p style=" color: #1F3B53; font-weight: 600; margin-top: 40px; " id="aaa"></p>
+                    <p style="color: #777777; font-size: 2rem; margin-top: 20px;border: 1px solid #1F3B53;">IT ENGINEER
+                    </p>
+                </div> <br>
+                <div class="box2sec">
+                    <p>PROFILE</p>
+                    <hr style="margin-top: 0%;border: 2px solid #1F3B53;"">
+             <span id=" ppp1"></span>
+                    <p style="margin-top: 30px;">PROJECTS</p>
+                    <div class="project-logs-content">
+                    </div>
+                </div>
+
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>Kashmir Footwear Business Website</h3>
+                        <a href="https://new-kashmir-footwear.netlify.app/" target="_blank"> <img
+                                src="/FSD_5th_SEM_Hammad/Assignments/3ss.png" height="150"
+                                style="border: 3px solid black;" alt=""></a>
+                        <p>I created a real-world e-commerce website for my family's business, "New Kashmir Footwear,"
+                            which has been running for 30 years. This project helped attract more customers and improve
+                            the business by putting my web development skills into practical use.</p>
+                        <br>
+                        <div class="project-links">
+                            <a href="https://new-kashmir-footwear.netlify.app/" target="_blank"
+                                class="project-link">Live Demo</a>
+                            <a href="https://github.com/hammad-khan211/New-Kashmir-Footwear" target="_blank"
+                                class="project-link">GitHub Repo</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Iron Paradise Workout Website</h3>
+                        <a href="https://iron-paradise-workout.netlify.app/" target="_blank"> <img
+                                src="/FSD_5th_SEM_Hammad/Assignments/1ss.png" height="150"
+                                style="border: 3px solid black;" alt=""></a>
+                        <p>A comprehensive gym workout website named "Iron Paradise." It provides workout plans based on
+                            physique, meal recommendations, and a BMI calculator. It also includes user login,
+                            registration, and a payment section, although the backend is not yet fully built.</p>
+                        <br>
+                        <div class="project-links">
+                            <a href="https://iron-paradise-workout.netlify.app/" target="_blank"
+                                class="project-link">Live Demo</a>
+                            <a href="https://github.com/hammad-khan211/Mini_Project" target="_blank"
+                                class="project-link">GitHub Repo</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Professional Portfolio for Prof. Pervez Khan</h3>
+                        <a href="https://prof-ahmad-pervez-portfolio.netlify.app/" target="_blank"> <img
+                                src="/FSD_5th_SEM_Hammad/Assignments/2ss.png" height="150"
+                                style="border: 3px solid black;" alt=""></a>
+                        <p>A professional portfolio website designed and built for my uncle, a renowned professor. This
+                            project was a freelance assignment that allowed me to apply my skills for a real client and
+                            gain professional experience.</p>
+                        <br>
+                        <div class="project-links">
+                            <a href="https://prof-ahmad-pervez-portfolio.netlify.app/" target="_blank"
+                                class="project-link">Live Demo</a>
+                            <a href="https://github.com/hammad-khan211/Demo-Portfolio-Project" target="_blank"
+                                class="project-link">GitHub Repo</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>My Professional Portfolio Website</h3>
+                        <a href="https://ahmad-hammad-khan-portfolio.netlify.app/"><img
+                                src="/FSD_5th_SEM_Hammad/Assignments/5ss.png" height="150"
+                                style="border: 3px solid black;" alt=""></a>
+                        <p>A personal portfolio website, built as a responsive single-page application.
+                            The design focuses on a clean, professional UI to ensure a seamless user experience.
+                            This project serves as a showcase of my skills in front-end development and a log of my
+                            academic journey.</p>
+                        <br>
+                        <div class="project-links">
+                            <a href="https://ahmad-hammad-khan-portfolio.netlify.app/" target="_blank"
+                                class="project-link">Live Demo</a>
+                            <a href="https://github.com/hammad-khan211/My-Portfolio" target="_blank"
+                                class="project-link">GitHub Repo</a>
+                        </div>
+                        <!-- <span class="project-link">No Live Demo</span>
+                <span class="project-link">No GitHub Repo</span> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        </div>
+
+
+
+
+
+        </div>
+    </center>
+</body>
+
+</html>
