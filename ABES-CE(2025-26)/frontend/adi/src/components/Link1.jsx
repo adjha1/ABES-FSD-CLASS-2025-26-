@@ -1,32 +1,27 @@
-import { Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 
-function Adi() {
-
+function Link1() {
     function Home() {
-        return <h1>This is my Home Page</h1>
+        return <h1>This is my home page</h1>
     }
-
     function About() {
-        return <h1>This is my About Page</h1>
+        return <h1>This is my About page</h1>
     }
-
     return (
         <div>
+
             <nav>
                 <Link to="/">Home</Link>
-                <Link to="./">About</Link>
-
+                <Link to="/about">About Us</Link>
             </nav>
 
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
-
             </Routes>
-
 
         </div>
     )
 }
 
-export default Adi
+export default Link1
