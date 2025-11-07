@@ -1,8 +1,6 @@
 #adi {
     text-align: center;
     display: flex;
-}
+    margin: auto;
 
-#bo {
-    padding: 20px;
 }
