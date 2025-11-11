@@ -1,0 +1,20 @@
+#hotel-menu-card {
+    padding: 10px;
+    height: 300px;
+    width: 230px;
+    border: 1px solid chocolate;
+    text-align: center;
+}
+
+#hotel-menu-card:hover {
+    border-radius: 20px;
+    background-color: chocolate;
+    cursor: pointer;
+    color: white;
+}
+
+
+#hotel-menu-card h3:hover {
+    color: white;
+    cursor: pointer;
+}

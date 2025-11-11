@@ -1,0 +1,10 @@
+#main-text {
+    text-align: center;
+    font-size: 40px;
+    color: chocolate;
+}
+
+#displayflex {
+    display: flex;
+    padding: 10px;
+}
