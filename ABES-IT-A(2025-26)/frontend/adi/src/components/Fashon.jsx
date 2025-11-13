@@ -1,6 +1,6 @@
 import React from 'react'
 import './fashon.css'
-function Fashon(props) {
+function Fashon({ props }) {
     return (
         <div>
 
