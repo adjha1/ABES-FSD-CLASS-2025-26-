@@ -1,10 +1,23 @@
-import React from 'react'
-import Link1 from './components/Link1'
+import React, { useEffect, useState } from 'react'
+import Fashon from './components/Fashon'
 
 function App() {
+  const [books, setBooks] = useState([])
+  useEffect(() => {
+    fetch('https://fakestoreapi.com/products')
+      .then(res => res.json())
+      .then(data => {
+        setBooks(data);
+      })
+  }, [])
   return (
     <div>
-      <Link1 />
+      {
+        books.map((b, i) => (
+          <Fashon key={i} props={b} />
+        ))
+      }
+
     </div>
   )
 }
