@@ -1,19 +1,26 @@
-const http = require('http');
+// const http = require('http');
 
-const myserver = http.createServer((req, res) => {
-    // console.log('server1');
-    // res.end('HI tihs is my first server');
+// const myserver = http.createServer((req, res) => {
+//     // console.log('server1');
+//     // res.end('HI tihs is my first server');
 
-    if (req.url == '/') {
-        res.end("this tis my home page")
-    }
-    else if (req.url == '/about') {
-        res.end("this is my about page ")
-    }
-    else {
-        res.end("404 page is not found")
-    }
-});
+//     if (req.url == '/') {
+//         res.end("this tis my home page")
+//     }
+//     else if (req.url == '/about') {
+//         res.end("this is my about page ")
+//     }
+//     else {
+//         res.end("404 page is not found")
+//     }
+// });
 
 
-myserver.listen(8000, () => console.log('server is run'))
+// myserver.listen(8000, () => console.log('server is run'))
+
+const fs = require('fs');
+
+// fs.writeFileSync("./it-a.txt", "we are student of it")
+const result = fs.readFileSync("./it-a.txt", "utf-8")
+
+console.log(result);
