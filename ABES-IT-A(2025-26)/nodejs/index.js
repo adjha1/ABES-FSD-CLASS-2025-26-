@@ -31,7 +31,7 @@
 
 
 
-const fs = require('fs');
+// const fs = require('fs');
 // fs.writeFile("./ad.txt", "code is very good time pass", () => { });
 // fs.readFile("./ad.txt", "utf-8", (err, result) => {
 //     if (err) {
@@ -46,4 +46,18 @@ const fs = require('fs');
 // fs.appendFileSync("./ad.txt", `and i am happy`);
 
 // fs.cpSync(".a1.txt", "b1.txt");
-fs.unlinkSync("./ad.txt");
+// fs.unlinkSync("./ad.txt");
+
+
+
+
+const os = require('os');
+console.log("platform", os.platform());
+console.log("userinfo", os.userInfo());
+console.log("CUP", os.arch());
+
+console.log("free memory", os.freemem());
+console.log("total memory", os.totalmem());
+console.log("uptime", os.uptime());
+console.log("home dir", os.homedir());
+console.log("hostname", os.hostname());
