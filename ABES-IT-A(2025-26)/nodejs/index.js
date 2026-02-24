@@ -1,31 +1,31 @@
-const http = require('http');
-const fs = require('fs');
-const home = fs.readFileSync('abes.html')
+// const http = require('http');
+// const fs = require('fs');
+// const home = fs.readFileSync('abes.html')
 
-const myserver = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('content-type', 'text/plain');
+// const myserver = http.createServer((req, res) => {
+//     res.statusCode = 200;
+//     res.setHeader('content-type', 'text/plain');
 
-    res.end(home);
+//     res.end(home);
 
-    // res.end('hello world');
+//     // res.end('hello world');
 
 
-    // console.log('server1');
-    // res.end('HI tihs is my first server');
+// console.log('server1');
+// res.end('HI tihs is my first server');
 
-    // if (req.url == '/') {
-    //     res.end("this tis my home page")
-    // }
-    // else if (req.url == '/about') {
-    //     res.end("this is my about page ")
-    // }
-    // else {
-    //     res.end("404 page is not found")
-    // }
-});
+// if (req.url == '/') {
+//     res.end("this tis my home page")
+// }
+// else if (req.url == '/about') {
+//     res.end("this is my about page ")
+// }
+// else {
+//     res.end("404 page is not found")
+//     // }
+// });
 
-myserver.listen(8000, () => console.log('server is run'))
+// myserver.listen(8000, () => console.log('server is run'))
 
 // const fs = require('fs');
 
@@ -71,5 +71,38 @@ myserver.listen(8000, () => console.log('server is run'))
 // console.log("home dir", os.homedir());
 // console.log("hostname", os.hostname());
 
+
+
+const fs = require('fs');
+
+const http = require('http')
+
+const user = {
+    name: 'abc',
+    age: 20
+}
+
+const app = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader('content-type', 'text/plain')
+    if (req.url == '/' && req.method == 'GET') {
+       try {
+         fs.writeFile('users.json', user,(err,data)=>{
+            if(err){
+                console.log(err)
+            }
+         });
+         res.end(user)
+       } catch (error) {
+        console.log(error.message)
+       }
+    }
+
+})
+
+
+app.listen(5000, () => {
+    console.log('Server is running')
+})
 
 
