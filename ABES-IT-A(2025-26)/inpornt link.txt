@@ -1,0 +1,13 @@
+https://m365.cloud.microsoft/?auth=2
+
+Your account has been successfully created on Simplifii. Your User ID is 03352 and Password is 95018343. Please note that the password is case sensitive.
+Cheers
+Team Simplifii
+
+
+https://abes365-my.sharepoint.com/:x:/r/personal/ashish_bajpai_abes_ac_in/_layouts/15/Doc.aspx?sourcedoc=%7BB7D8FEC3-FDBD-440D-BCFF-103CDF8E446D%7D&file=FSD_6th%20Sem%20Attendance%20Sheets%20YOP%202027.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1&wdOrigin=MAIL.SHELL%2CAPPHOME-WEB.FILEBROWSER.RECENT&wdPreviousSession=77f0ee8e-7fb1-4d76-ae77-6f3580e3ae21&wdPreviousSessionSrc=AppHomeWeb&ct=1769502605997
+
+https://abes.web.simplifii.com/index.php
+
+
+import 'bootstrap/dist/css/bootstrap.min.css';
